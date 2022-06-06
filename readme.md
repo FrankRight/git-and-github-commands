@@ -33,10 +33,16 @@ Then commit the changes
 git commit -m "COMMIT MESSAGE..."
 ```
 
-Keep track of what git is doing
+Keep track of what git is doing, show all commit made to document.
 
 ```git
 git log
+```
+
+To show git log in a single line
+
+```git
+git log --oneline
 ```
 
 ## Understanding Environments
