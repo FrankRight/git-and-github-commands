@@ -126,3 +126,11 @@ git mv <name of file to be renamed> <name to be renamed>
 ```
 
 File renaming and deletion using the above git commands places the files in staging state instead of normal modified this helps us skip an addition staging command step.
+
+## difference between changes
+
+```git
+git diff
+```
+
+To exit if a colon appear press q on the keyboard
