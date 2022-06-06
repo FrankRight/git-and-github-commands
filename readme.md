@@ -98,3 +98,31 @@ Can be patterns or just file names
 node_modules
 **/*-todo.md
 ```
+
+### Global ignoring of files
+
+```git
+git config --global core.excludesfile [file]
+```
+
+### Clearing the git cache
+
+If git ignore does not working try clearing the cache first.
+
+```git
+git rm -r --cached .
+```
+
+## File deletion
+
+```git
+git rm <file to be removed>
+```
+
+## File renaming
+
+```git
+git mv <name of file to be renamed> <name to be renamed>
+```
+
+File renaming and deletion using the above git commands places the files in staging state instead of normal modified this helps us skip an addition staging command step.
