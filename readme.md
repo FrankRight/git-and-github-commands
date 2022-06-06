@@ -79,3 +79,22 @@ git restore readme.md
 ```git
 git restore .
 ```
+
+#### Restore from the staged part
+
+```git
+git restore --staged <FILENAME>
+```
+
+## ignore some files
+
+use a file called .gitignore in the root of the project to ignore files.
+
+Can be patterns or just file names
+
+```git
+.DS_Store
+.vscode/
+node_modules
+**/*-todo.md
+```
