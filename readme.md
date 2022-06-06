@@ -1,4 +1,4 @@
-# Managing git commands
+# Managing git commands and Github
 
 First, register the username and the email for the global user using
 
@@ -139,4 +139,142 @@ File renaming and deletion using the above git commands places the files in stag
 git diff
 ```
 
-To exit if a colon appear press q on the keyboard
+To exit if a colon appear press q on the keyboard. For a lot of it diff tracking try using gitlens extension from the extensions marketplace.
+
+## Amending
+
+```git
+git commit --amend
+```
+
+## A reset
+
+Going back to a previous commit. Unstages some changes of the specified commit.
+
+```git
+git reset <COMMIT ID>
+```
+
+To delete all commit before the specified commit.
+
+```git
+git reset --hard <COMMIT ID>
+```
+
+## Rebasing
+
+Commits from one branch to another.
+
+```git
+git rebase <branch>/<commit>
+```
+
+Using it with an iteractive editor is the best way to use rebase.
+
+```git
+git rebase --interactive <branch>/<commit>
+
+or
+
+git rebase --i HEAD~<no of commits>
+
+or
+
+git rebase -i --root
+```
+
+## Branches
+
+### List all braches
+
+```git
+git branch
+```
+
+### Copying a branch
+
+```git
+git switch -c <new branch name>
+
+# Switch to master or a specific branch
+git switch <name of the branch>
+
+or older version
+git checkout -b <new branch name>
+```
+
+### Merging branch with main
+
+navigate first to main branch before running the below command.
+
+```git
+git merge <branchname>
+```
+
+### Deleting a branch
+
+After merging with the main if the branch is no longer in need you can delete it.
+
+```git
+git branch --delete <branchname>
+
+or
+
+git branch -d <branchname>
+
+or
+
+git branch -D <branchname>
+```
+
+## Working with Github
+
+### remotes
+
+Link a remote link to a github rep
+
+```git
+git remote add <name> <url>
+```
+
+Remove a remote rep
+
+```git
+git remote remove <name>
+```
+
+Renaming a remote rep
+
+```git
+git rename <oldname> <newname>
+```
+
+List all the remotes available
+
+```git
+git remote -v
+```
+
+Pushing a remote online
+
+```git
+git push <remote branch>
+```
+
+Pushing for the first time
+
+```git
+git push -u origin-main
+```
+
+Subsequent pushes - after the first one
+
+```git
+git push
+```
+
+All local braches to github
+
+```git
+git push --all
+```
